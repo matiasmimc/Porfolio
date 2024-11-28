@@ -1,0 +1,43 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: "Agosto - Diciembre 2024",
+        title: "Ayudante curso Algoritmos, Redes y Equidad",
+        description: "Ayudantía en curso de análisis de redes como sistemas socio-técnicos y equidad en algoritmos y modelos predictivos del DCC de la Universidad de Chile.",
+        tags: ["IBM Fainess 360"]
+    },
+    {
+        date: "Marzo - Julio 2024",
+        title: "Proyecto de desarrollo de Software",
+        description: "Desarrollo en equipo de una aplicación web para gestionar torneos deportivos bajo la metodología Scrum.",
+        link: "https://github.com/DCC-CC4401/2024-1-CC4401-1-grupo-8",
+        tags: ["Django", "HTML"],
+    },
+    {
+        date: "Marzo - Julio 2024",
+        title: "Proyecto Minería de Datos",
+        description: "Proyecto de investigación del impacto de herramientas/espacios pedagógicos en el rendimiento escolar, específicamente en la prueba de admisión universitaria en Chile.",
+        link: "https://github.com/matiasmimc/Repo-Mineria-PSU",
+        tags: ["scikit-learn"]
+    },
+    {
+        date: "Febrero 2024",
+        title: "Práctica Ingeniería de Software",
+        description: "Diseño de base de datos y desarrollo de una aplicación administrativa para Presidencia de la República.",
+        tags: [".Net", "Vue.js"]
+    }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }            
+</ol>
+
